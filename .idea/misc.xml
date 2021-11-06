@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/drawable/choosetype_bg.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/drawable/detail_progress_bg.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/drawable/progress_bg.xml" value="0.26979166666666665" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/drawable/round_button.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/activity_add_item.xml" value="0.14606741573033707" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/activity_add_type.xml" value="0.21784420289855072" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/activity_detail.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/details_item.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/empty.xml" value="0.12916666666666668" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/title.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/type_choose_item.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/type_list_add_item.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MoneyNote/app/src/main/res/layout/type_list_item.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

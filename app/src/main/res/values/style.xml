@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomProgressStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minWidth">23dip</item>
+        <item name="android:maxWidth">23dip</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/spruce</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/kaitoke</item>
+    </style>
+</resources>
