@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView moneyListView;
     private TypeAdapter typeAdapter;
     private TypeAction typeAction;
+    private LinearLayout census_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         initSumMoney();
+        census_btn = findViewById(R.id.census);
+        census_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,CensusActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 
@@ -84,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 //                    Log.d(TAG, "loseFocus");
                     progressBar_main.setMax((int) sum);
                     typeAction.updateSumMain(Double.valueOf(sum_main.getText().toString()));
+                    typeAction.updateRemainMian();
 
                     //更新
                     moneyBeanList = typeAction.getAll();
@@ -101,21 +113,6 @@ public class MainActivity extends AppCompatActivity {
         add_type_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(moneyBeanList.get(moneyBeanList.size()-1).getType()!=null){
-//                    MoneyBean newType = new MoneyBean();
-//                    moneyBeanList.add(newType);
-//
-//                    typeAdapter.notifyItemInserted(moneyBeanList.size() - 1);
-//                    moneyListView.scrollToPosition(moneyBeanList.size() - 1);
-//                }
-//
-//
-//                LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
-////                final View view_add_item = inflater.inflate(R.layout.type_list_add_item,null);
-//                View view_add_item = View.inflate(getApplicationContext(), R.layout.type_list_add_item, null);
-//                EditText type_add = view_add_item.findViewById(R.id.type_add_et);
-//
-//                Log.d(TAG, "onClick: "+type_add.isFocusable());
 
                 if (moneyBeanList.size()>1){
                     Intent intent = new Intent(MainActivity.this, AddItemActivity.class);

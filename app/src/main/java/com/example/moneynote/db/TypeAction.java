@@ -36,7 +36,7 @@ public class TypeAction {
                     moneyBean.setSpendMoney(cursor.getDouble(cursor.getColumnIndex(MoneySQLiteOpenHelper.table1_column3)));
                     moneyBean.setRemainMoney(cursor.getDouble(cursor.getColumnIndex(MoneySQLiteOpenHelper.table1_column4)));
                     moneyBean.setSumMoney(cursor.getDouble(cursor.getColumnIndex(MoneySQLiteOpenHelper.table1_column5)));
-                    Log.d(TAG, "getAll: "+moneyBean.getType()+moneyBean.getSpendMoney());
+                    Log.d(TAG, "getAll: "+moneyBean.getType()+moneyBean.getSpendMoney()+"  "+moneyBean.getRemainMoney()+"  "+moneyBean.getSumMoney());
                     moneyBeanList.add(moneyBean);
                 }while (cursor.moveToNext());
             }
@@ -71,6 +71,16 @@ public class TypeAction {
         return true;
     }
 
+    public boolean updateRemainMian(){
+        MoneyBean moneyBean = select("总金额");
+        ContentValues values = new ContentValues();
+        values.put(MoneySQLiteOpenHelper.table1_column4,moneyBean.getSumMoney()-moneyBean.getSpendMoney());
+        Log.d(TAG, "updateRemainMian: 剩余金额为"+(moneyBean.getSumMoney()-moneyBean.getSpendMoney()));
+        db.update(MoneySQLiteOpenHelper.table1,values,MoneySQLiteOpenHelper.table1_column2+" =?",new String[]{"总金额"});
+        values.clear();
+        return true;
+    }
+
     public boolean updateSumType(String type, double sum){
         ContentValues values = new ContentValues();
         values.put(MoneySQLiteOpenHelper.table1_column5,sum);
@@ -78,6 +88,7 @@ public class TypeAction {
         values.clear();
         return true;
     }
+
 
     public boolean updateSpend(String type, double spend){
         Log.d(TAG, "updateSpend: "+type+spend);

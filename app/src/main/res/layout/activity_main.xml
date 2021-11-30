@@ -151,7 +151,7 @@
                 android:background="#00000000"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/id_tab3"
+            android:id="@+id/census"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -168,7 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#A6A6A6"
-                android:text="页面3"/>
+                android:text="统计"/>
         </LinearLayout>
 
 
